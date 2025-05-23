@@ -30,6 +30,28 @@ def clean_and_tokenize(messages):
         words.extend([word for word in tokens if word not in stop_words and word not in string.punctuation])
     return words
 
+def conversation_topic(keywords):
+    topic_map = {
+        'python': 'Python and its uses',
+        'ai': 'Artificial Intelligence',
+        'machine': 'Machine Learning',
+        'learning': 'Machine Learning',
+        'data': 'Data Science',
+        'language': 'Programming Languages',
+        'web': 'Web Development',
+        'analysis': 'Data Analysis',
+        'c': 'C Programming',
+        'c++': 'C++ Programming',
+        'oop': 'Object-Oriented Programming',
+        'embedded': 'Embedded Systems',
+    }
+
+    matched_topics = {topic_map[word] for word in keywords if word in topic_map}
+    if matched_topics:
+        return " and ".join(matched_topics)
+    else:
+        return "General technical discussion"
+    
 def summarize(filepath):
     lines = read_chat_file(filepath)
     user_msgs, ai_msgs = parse_chat(lines)
@@ -40,11 +62,12 @@ def summarize(filepath):
     keyword_freq = Counter(keywords).most_common(5)
     keyword_list = [word for word, _ in keyword_freq]
 
-    print("Summary:")
+    topic = conversation_topic(keyword_list)
+
+    print("\nSummary:")
     print(f"- The conversation had {total_msgs} exchanges.")
-    print(f"- Number of user messages: {len(user_msgs)}")
-    print(f"- Number of AI messages: {len(ai_msgs)}")
+    print(f"- The user asked mainly about {topic}.")
     print(f"- Most common keywords: {', '.join(keyword_list)}")
 
 if __name__ == "__main__":
-    summarize('text/input2_chat.txt')
+    summarize('text/input_chat.txt')
