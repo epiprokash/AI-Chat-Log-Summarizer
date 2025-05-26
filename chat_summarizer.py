@@ -70,4 +70,4 @@ def summarize(filepath):
     print(f"- Most common keywords: {', '.join(keyword_list)}")
 
 if __name__ == "__main__":
-    summarize('text/input2_chat.txt')
+    summarize('text/input_chat.txt')
