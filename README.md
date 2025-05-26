@@ -36,7 +36,6 @@ Designed for simplicity and effectiveness, this utility demonstrates essential *
 
 ```bash
 git clone https://github.com/epiprokash/AI-Chat-Log-Summarizer.git
-cd ai-chat-summarizer
 ```
 
 ### 2️⃣ Install Dependencies
@@ -48,8 +47,8 @@ pip install -r requirements.txt
 
 Place your `.txt` chat file in the `text/` directory. Format should follow this structure:
 
-`User:` What is C++?
-`AI:` C++ is a general-purpose programming language created by Bjarne Stroustrup.
+`User:` What makes it so popular? <br>
+`AI:` Python has a very clean and easy-to-understand syntax. It also has a huge community and a rich ecosystem of libraries and frameworks, which makes development faster and easier. <br>
 
 ### 4️⃣ Run the Summarizer
 
@@ -60,7 +59,7 @@ python chat_summarizer.py
 
 ### 📄 Sample Output
 
-Summary:
+`Summary:`
 - The conversation had 10 exchanges.
 - The user asked mainly about Python and its uses and Machine Learning.
 - Most common keywords: python, libraries, machine, learning, development
