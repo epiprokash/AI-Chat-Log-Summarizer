@@ -15,7 +15,6 @@ Designed for simplicity and effectiveness, this utility demonstrates essential *
 - 🧠 **Keyword Analysis**: Extracts most frequently used non-trivial terms (stopword removal included)
 - 🗂 **Topic Inference**: Infers nature of the conversation based on contextual keywords
 - 📄 **Readable Summary**: Generates structured, human-readable summaries
-- 🚀 **Plug-and-play** ready for automation, enhancements, and real-world deployment
 
 ---
 
