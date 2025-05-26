@@ -27,15 +27,6 @@ Designed for simplicity and effectiveness, this utility demonstrates essential *
 
 ---
 
-## 📂 Project Structure
-
-ai-chat-summarizer/
-├── chat_summarizer.py # Main summarization script
-├── text/
-│ └── input_chat.txt # Sample chat log file (editable)
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
-
 
 ---
 
@@ -53,3 +44,36 @@ cd ai-chat-summarizer
 ```bash
 pip install -r requirements.txt
 ```
+### 3️⃣ Prepare Your Chat Log
+
+Place your `.txt` chat file in the `text/` directory. Format should follow this structure:
+
+`User:` What is C++?
+`AI:` C++ is a general-purpose programming language created by Bjarne Stroustrup.
+
+### 4️⃣ Run the Summarizer
+
+```bash
+python chat_summarizer.py
+
+```
+
+### 📄 Sample Output
+
+Summary:
+- The conversation had 10 exchanges.
+- The user asked mainly about Python and its uses and Machine Learning.
+- Most common keywords: python, libraries, machine, learning, development
+
+
+
+
+
+## 👨‍💻 Developed By
+
+**Prokash Maitra**  
+*Competitive Programmer | Machine Learning Enthusiast | CSE Graduate*  
+
+- [GitHub](https://github.com/epiprokash)  
+- [LinkedIn](https://www.linkedin.com/in/prokash-maitra-8387742aa/)
+
